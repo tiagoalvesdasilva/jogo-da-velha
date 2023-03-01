@@ -90,3 +90,39 @@ function checaVencedor(){
         mudarVencedor(quadrado3);
     }
 }
+
+function mudarVencedor(quadrado){
+    vencedor = quadrado.innerHTML;
+    vencedorSelecionado.innerHTML = vencedor
+}
+
+function mudaCorQuadrado(quadrado1, quadrado2, quadrado3){
+    quadrado1.style.background = '#27da5d';
+    quadrado2.style.background = '#27da5d';
+    quadrado3.style.background = '#27da5d';
+
+}
+
+function checaSequencia(quadrado1, quadrado2, quadrado3){
+    let eigual = false; 
+
+    if (quadrado1.innerHTML !== '-' && quadrado1.innerHTML === quadrado2.innerHTML && quadrado2.innerHTML === quadrado3.innerHTML){
+        eigual = true;
+    }
+    return eigual;
+};
+
+function reiniciar()
+{
+    vencedor = '';
+    vencedorSelecionado.innerHTML = '';
+
+    for (let i = 1; i <= 9; i++) {
+        let quadrado = document.getElementById(i);
+        quadrado.style.background = 'aqua';
+        quadrado.style.color = 'aqua';
+        quadrado.innerHTML = '-';
+    }
+
+    mudarJogador('X');
+}
