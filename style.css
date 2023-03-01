@@ -27,3 +27,16 @@ button{
     background-color: aqua;
     cursor: pointer;
 }
+@media (min-width:300px) and (max-width:600px) {
+   .quadrado{
+    width: 20px;
+    padding: 25px;
+    font-size: 30px;
+   } 
+    .jogador, .vencedor{
+    font-size: 25px;
+    }
+    h1{
+    font-size: 25px;
+}
+}
